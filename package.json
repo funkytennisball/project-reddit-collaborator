@@ -17,8 +17,8 @@
     "migrate:dev": "cd server && cross-env NODE_ENV=development ../node_modules/.bin/sequelize db:migrate",
     "migrate:staging": "cd server && cross-env NODE_ENV=staging ../node_modules/.bin/sequelize db:migrate",
     "migrate:prod": "cd server && cross-env NODE_ENV=production ../node_modules/.bin/sequelize db:migrate",
-    "node:staging": "pm2 start config/staging.json",
-    "node:prod": "pm2 start config/prod.json",
+    "node:staging": "node server/index.js",
+    "node:prod": "node server/index.js",
     "build:prod": "npm run webpack:prod",
     "webpack:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --mode production",
     "webpack:dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --mode development"
