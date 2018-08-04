@@ -14,7 +14,7 @@ const PORT = process.env.PORT || config.PORT
 
 const startServer = () => {
   // Start init
-  app.listen(config.PORT, () => {
+  app.listen(PORT, () => {
     logger.info(`Server running at port: ${chalk.green(PORT)}`)
   })
 }
